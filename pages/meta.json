@@ -1,0 +1,21 @@
+{
+  "index": {
+    "title": "Introduction",
+    "type": "page",
+    "hidden": true
+  },
+  "publications": {
+    "title": "Publications",
+    "type": "page",
+    "theme": {
+      "sidebar": false
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "type": "page",
+    "theme": {
+      "sidebar": false
+    }
+  }
+}

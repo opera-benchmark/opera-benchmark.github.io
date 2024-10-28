@@ -1,0 +1,43 @@
+---
+title: OPERA
+---
+
+import Callout from 'nextra-theme-docs/callout'
+import Bleed from 'nextra-theme-docs/bleed'
+import Image from 'next/image'
+import Link from 'next/link'
+
+{ 
+  <>
+  <h1 className="text-center font-extrabold md:text-5xl mt-8">
+  <Image src = "/images/OPERA_logo.png" alt="OPERA Logo" height={100} width={333}/>
+  </h1>
+  </>
+}
+
+<div className="mx-auto max-w-full w-[880px] text-center px-4 mb-10">
+  <div className="text-lg mb-2 text-gray-600 md:!text-2xl">
+    the first <u><strong>OPE</strong></u>n  <u><strong>R</strong></u>espiratory <u><strong>A</strong></u>coustic foundation model 
+    pretraining and benchmarking system
+  </div>
+</div>
+
+
+<Callout emoji="">
+**OPERA** is a system that curates **large-scale unlabelled** respiratory audio datasets to pretrain audio encoders that are **generalizable** enough to be adapted for various health tasks with **limited labeled data**.
+</Callout>
+
+
+
+**OPERA**:
+-  Curate a unique large-scale(~136K samples, 400+ hours), multi-source (5 datasets), multi-modal (breathing, coughing, and lung sounds) and publicly available (or under controlled access) dataset for model pretraining. 
+-  Pretrain 3 generalizable acoustic models with the curated unlabeled data using contrastive learning and generative pretraining, and release the model checkpoints.
+-  Employ 10 labeled datasets (6 not covered by pretraining) to formulate 19 respiratory health tasks,  ensuring fair, comprehensive and reproducible downstream evaluation. 
+-  Enable researchers and developers to extract feature using our model, or develop new models with our data and system, as a starting point for future exploration.
+
+<br/>
+
+<div className="mt-16 mb-20 text-center">
+  [Paper](https://arxiv.org/pdf/2406.16148) · [ArXiv](https://arxiv.org/abs/2406.16148) · [Blog](/blog) · [GitHub Repository](https://github.com/evelyn0414/OPERA)
+</div>
+
