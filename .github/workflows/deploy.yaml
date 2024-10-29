@@ -24,27 +24,27 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # - name: Checkout
-      #   uses: actions/checkout@v3
-      # - name: Setup Node
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: "16"
-      # - name: Install pnpm
-      #   run: curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm@next-7
-      # - name: Install next
-      #   run: npm i -g next
-      # - name: Install dependencies
-      #   run: pnpm install
-      # - name: Build GitHub Pages
-      #   run: 
-      #     pnpm build
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - name: Install pnpm
+        run: curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm@next-7
+      - name: Install next
+        run: npm i -g next
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build GitHub Pages
+        run: 
+          pnpm build
       # - name: Static HTML export with Next.js
       #   run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v1
         with:
-          path: out/
+          path: .next/
 
   # Deployment job
   deploy:
@@ -56,4 +56,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v1
