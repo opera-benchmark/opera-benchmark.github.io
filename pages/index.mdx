@@ -24,12 +24,11 @@ import Link from 'next/link'
 
 
 <Callout emoji="">
-**OPERA** is a system that curates **large-scale unlabelled** respiratory audio datasets to pretrain audio encoders that are **generalizable** enough to be adapted for various health tasks with **limited labeled data**.
+**OPERA** is a system that curates **large-scale unlabelled** respiratory audio datasets to pretrain audio encoders that are **generalizable** to be adapted for various health tasks with **limited labeled data**.
 </Callout>
 
 
-
-**OPERA**:
+Within the **OPERA** system we:
 -  Curate a unique large-scale(~136K samples, 400+ hours), multi-source (5 datasets), multi-modal (breathing, coughing, and lung sounds) and publicly available (or under controlled access) dataset for model pretraining. 
 -  Pretrain 3 generalizable acoustic models with the curated unlabeled data using contrastive learning and generative pretraining, and release the model checkpoints.
 -  Employ 10 labeled datasets (6 not covered by pretraining) to formulate 19 respiratory health tasks,  ensuring fair, comprehensive and reproducible downstream evaluation. 
